@@ -7,11 +7,11 @@ body {
     background-color: #ffffff;
     max-width: 1280px;
     margin: auto;
-} /* Schriftart, Hintergrundfarbe, Größe, Randbreite der gesamten Webpage*/
+} /* Schriftart (versch. font familien hintereinander. Nimm den, wenn du den nicht findest, dann den anderen; Hintergrundfarbe, Größe, mit Margin kannst du Blockelemente z.B. zentrieren*/
 
 header>img {
     max-width: 100%;
-} /*Das des Bild ganz oben ist*/
+} /*Das des Bild ganz oben ist und nicht im a drinnen steht. das Größer Zeichen sagt, das eine muss direkt unter dem anderem stehen (hier header)*/
 
 header a img {
     border-radius: 50%;
@@ -19,6 +19,7 @@ header a img {
     margin: auto;
     margin-top: -50px;
 } /*Userfoto formatierung: radius: Kreis, mittig, -50 px verschoben */
+/*a kommt vom Link*/
 
 main {
     max-width: 1024px;
@@ -31,10 +32,10 @@ main {
 
 article {
     padding: 1em;
-} 
+} /* verschiebt den Innenabstand zum Rand, em= element (breite vom Buchstaben M )*/
 
 article p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /*definiert mit der Familie aus sans-serif*/
     text-align: justify;
     line-height: 1.2em;
 }
@@ -54,12 +55,12 @@ article figure>img {
     height: 600px;
     border: 1px solid silver;
     margin: auto;
-}
+} /*map ist eine ID*/
 
 footer {
     text-align: center;
     padding: 1em 2em 3em 2em;
-}
+} /*oben, rechts, unten, links*/
 
 footer nav {
     display: grid;
@@ -77,7 +78,7 @@ figure>img,
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
-}
+} /*die Map*/
 
 @media screen and (max-width: 1280px) {
     main {
