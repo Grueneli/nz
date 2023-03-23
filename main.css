@@ -7,11 +7,13 @@ body {
     background-color: #ffffff;
     max-width: 1280px;
     margin: auto;
-} /* Schriftart (versch. font familien hintereinander. Nimm den, wenn du den nicht findest, dann den anderen; Hintergrundfarbe, Größe, mit Margin kannst du Blockelemente z.B. zentrieren*/
+} /* Schriftart (versch. font familien hintereinander. Nimm den, wenn du den nicht findest, 
+dann den anderen; Hintergrundfarbe, Größe, mit Margin kannst du Blockelemente z.B. zentrieren*/
 
 header>img {
     max-width: 100%;
-} /*Das des Bild ganz oben ist und nicht im a drinnen steht. das Größer Zeichen sagt, das eine muss direkt unter dem anderem stehen (hier header)*/
+} /*Das des Bild ganz oben ist und nicht im a drinnen steht. das Größer Zeichen sagt, 
+das eine muss direkt unter dem anderem stehen (hier header)*/
 
 header a img {
     border-radius: 50%;
@@ -78,7 +80,7 @@ figure>img,
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
-} /*die Map*/
+} /*die Map und bilder*/
 
 @media screen and (max-width: 1280px) {
     main {
@@ -88,4 +90,5 @@ figure>img,
     #map {
         width: 100%;
     }
-}
+} /* Bildschirm, wenn die Anzeige unter 1280 px bleibt, sollen die Border weggenommen werden. 
+mit den media rules kann ich definieren, wie die ANzeige ist bei untersch. Größen => responsive design */
