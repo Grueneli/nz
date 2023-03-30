@@ -99,6 +99,7 @@ console.log (STOPS);
 
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
+L.control.scale({imperial: false}).addTo(map); //Maßstab hinzufügen. Wenns nicht sein soll, muss der Wert gleich Falsch gesetzt werden
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
