@@ -1,6 +1,6 @@
 let stop_lat = -43.53;
 let stop_lng = 170.15;
-let zoom = 13; // mit 13 wird angegeben wie weit reingezoomt werden soll => Faktor 13
+let zoom = 8; // mit 13 wird angegeben wie weit reingezoomt werden soll => Faktor 13
 let title= 'Der Fox Gletscher'
 
 const STOPS = [
@@ -104,9 +104,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
  }).addTo(map);
 
-L.marker([stop_lat, stop_lng]).addTo(map)
- .bindPopup(title)
-.openPopup();
 
 for (let stop of STOPS){
 console.log(stop);
@@ -115,6 +112,10 @@ console.log(stop.title);
 console.log(stop.lat);
 console.log(stop.lng);
 console.log(stop.wikipedia);
+
+L.marker([stop.lat, stop.lng]).addTo(map)
+ .bindPopup(stop.title)
+.openPopup();
 
 } // speicher mir für jeden der STOPS ein Stop
 //lat, lng, Wikipedia
