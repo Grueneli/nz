@@ -108,5 +108,14 @@ L.marker([stop_lat, stop_lng]).addTo(map)
  .bindPopup(title)
 .openPopup();
 
+for (let stop of STOPS){
+console.log(stop);
+console.log(stop.title);
+console.log(stop.title);
+console.log(stop.lat);
+console.log(stop.lng);
+console.log(stop.wikipedia);
+
+} // speicher mir für jeden der STOPS ein Stop
 //lat, lng, Wikipedia
 //solang bei dem Objekt Namen nur strings vorhanden sind, braucht man keine ""
