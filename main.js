@@ -104,10 +104,15 @@ L.control.scale({
     position: "topright"
 }).addTo(map); //Maßstab hinzufügen in km und rechts oben. Wenns nicht sein soll, muss der Wert gleich Falsch gesetzt werden
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
  }).addTo(map);
- L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+ let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+
+L.control.layers({
+    "Openstreetmap":osm,
+    "Watercolor": watercolor
+}).addTo(map)
 
 for (let stop of STOPS){
 //Marker für den Stop
