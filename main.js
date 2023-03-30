@@ -108,10 +108,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 for (let stop of STOPS){
 //Marker für den Stop
 
-L.marker([stop.lat, stop.lng]).addTo(map)
- .bindPopup(stop.title)
+let marker = L.marker([stop.lat, stop.lng]);
+ marker.addTo(map);
+ marker.bindPopup(stop.title);
 
 if ( stop.user == "grueneli"){
+    marker.openPopup();
     console.log("Mein Marker: ", stop);
 }
 } // speicher mir für jeden der STOPS ein Stop
