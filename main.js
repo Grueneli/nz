@@ -110,8 +110,10 @@ for (let stop of STOPS){
 
 L.marker([stop.lat, stop.lng]).addTo(map)
  .bindPopup(stop.title)
-.openPopup();
 
+if ( stop.user == "grueneli"){
+    console.log("Mein Marker: ", stop);
+}
 } // speicher mir für jeden der STOPS ein Stop
 //lat, lng, Wikipedia
 //solang bei dem Objekt Namen nur strings vorhanden sind, braucht man keine ""
