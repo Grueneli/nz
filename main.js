@@ -110,12 +110,17 @@ for (let stop of STOPS){
 
 let marker = L.marker([stop.lat, stop.lng]);
  marker.addTo(map);
- marker.bindPopup(stop.title);
-
+ marker.bindPopup(`<h3>${stop.title}</h3>
+ <a href= "${stop.wikipedia}">Wikipedia</a>
+ `);
+//Marker wird erweiter, um den Wikipedia Link
 if ( stop.user == "grueneli"){
     marker.openPopup();
     console.log("Mein Marker: ", stop);
 }
-} // speicher mir für jeden der STOPS ein Stop
+} 
+
+
+// speicher mir für jeden der STOPS ein Stop
 //lat, lng, Wikipedia
 //solang bei dem Objekt Namen nur strings vorhanden sind, braucht man keine ""
