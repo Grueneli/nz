@@ -95,7 +95,8 @@ const STOPS = [
         wikipedia: "https://de.wikipedia.org/wiki/Auckland"
     } ];
     
-    
+console.log (STOPS);
+
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
