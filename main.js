@@ -108,12 +108,17 @@ let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
  }).addTo(map);
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
-let roads = L.gridLayer.googleMutant({type: "roadmap"}).addTo(map);
+var roads = L.gridLayer
+	.googleMutant({
+		type: "roadmap", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
+	})
+	.addTo(map);
 
 
 L.control.layers({
     "Openstreetmap":osm,
-    "Watercolor": watercolor
+    "Watercolor": watercolor,
+    "roadmap": roads
 }).addTo(map)
 
 for (let stop of STOPS){
