@@ -118,7 +118,7 @@ for (let stop of STOPS){
 //Marker für den Stop
 
 let marker = L.marker([stop.lat, stop.lng] , {
-    opacity: 0.5, //Options OBject: alle Marker sind jetzt zu 50% Transparent
+    opacity: 0 //Options OBject: alle Marker sind jetzt zu 50% Transparent
 });
  marker.addTo(map);
  marker.bindPopup(`<h3>${stop.title}</h3>
