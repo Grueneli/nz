@@ -48,6 +48,10 @@ article h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.caption {
+    -fx-padding: 10px; /* Setze einen 10-Pixel-Abstand zum Rand */
+}
+
 article figure>img {
     width: 100%;
 }
