@@ -108,18 +108,21 @@ let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
  }).addTo(map);
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
-let roads = L.gridLayer
-.googleMutant({
-    type: "roadmap", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
-})
-.addTo(map);
+let OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
+let CyclOSM = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
 
 
 L.control.layers({
     "Openstreetmap":osm,
-    "Watercolor": watercolor,
-    "Roads": roads,
-   
+    "Watercolor": watercolor,  
+    "optentopomap": OpenTopoMap,
+    "cyclosm": CyclOSM,
 }).addTo(map)
 
 for (let stop of STOPS){
