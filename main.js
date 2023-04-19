@@ -101,7 +101,7 @@ console.log (STOPS);
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 L.control.scale({
     imperial: false, 
-    position: "topright"
+    position: "bottomleft"
 }).addTo(map); //Maßstab hinzufügen in km und rechts oben. Wenns nicht sein soll, muss der Wert gleich Falsch gesetzt werden
 
 let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
