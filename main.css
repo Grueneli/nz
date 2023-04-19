@@ -33,8 +33,9 @@ main {
 } /* Formatierung des Hauptteils. Gestrichelte silberne Außenlinie*/
 
 figcaption {
-padding: 10px;
+padding: 10 px;
 }
+
 article {
     padding: 1em;
 } /* verschiebt den Innenabstand zum Rand, em= element (breite vom Buchstaben M )*/
